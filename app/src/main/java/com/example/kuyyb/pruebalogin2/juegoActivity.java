@@ -24,6 +24,9 @@ public class juegoActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tablero);
+        player = MediaPlayer.create(juegoActivity.this, R.raw.cytus);
+        player.setLooping(true);
+        player.start();
         dados=(Button)findViewById(R.id.dados);
         checkBox3=(CheckBox)findViewById(R.id.checkBox3);
         //= MediaPlayer.create(this, R.raw.cytus);
@@ -51,5 +54,18 @@ public class juegoActivity extends Activity {
             }
         });
 
+
+    }
+    @Override
+    protected void onPause(){
+
+        super.onPause();
+
+        player.stop();
+    }
+    @Override
+    protected void onResume(){
+        super.onResume();
+        player.start();
     }
 }

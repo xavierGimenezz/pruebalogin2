@@ -20,13 +20,13 @@ public class MenuActivity extends Activity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_inicio);
-        player = MediaPlayer.create(MenuActivity.this, R.raw.cytus);
+        /*player = MediaPlayer.create(MenuActivity.this, R.raw.cytus);
         player.setLooping(true);
-        player.start();
+        player.start();*/
         start=(Button)findViewById(R.id.start);
         rank=(Button)findViewById(R.id.rank);
         opciones=(Button)findViewById(R.id.opciones);
-        checkBox2=(CheckBox)findViewById(R.id.checkBox2);
+        /*checkBox2=(CheckBox)findViewById(R.id.checkBox2);
         //= MediaPlayer.create(this, R.raw.cytus);
         checkBox2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,7 +40,7 @@ public class MenuActivity extends Activity{
                     player.start();
                 }
             }
-        });
+        });*/
         /*opciones.setOnClickListener(new View.OnClickListener(){
 
             @Override
@@ -63,12 +63,12 @@ public class MenuActivity extends Activity{
 
         super.onPause();
 
-        player.stop();
+        //player.stop();
     }
     @Override
     protected void onResume(){
         super.onResume();
-        player.start();
+        //player.start();
     }
     //public void playmusic();
 
